@@ -1,0 +1,31 @@
+Modules implemented in my program:
+
+Modules Used in ALL TASKS:
+
+gtopoRead.c: This module will read the data of gtopo file. This file will check dimension and image data of the gtopo file.Moreover, it 
+	     also write gtopo image data to the file, compare gtopo file and reduces the gtopo files.
+	   FileInfo *initialisationOfReadFileStruct();
+	   int checkHeight(FILE* inputFile,char* filename,FileInfo *fileValues,char* height);
+	   int checkWidth(FILE* inputFile,char* filename,FileInfo *fileValues,char* width);
+	   int checkread(FILE* inputFile,char* filename);
+	   int checkwrite(FILE* inputFile,char* filename,FileInfo *fileValues);
+	   int readCommentAndCheck(FILE *file, int maxCommentLen, FileInfo *fileValues,char* filename);
+	   int readImageDataBinary(struct FileInfo *fileValues,FILE *inputFile, char* filename);
+	   int writeFile(FILE*outputFile,char *filename,FileInfo *fileValues);
+	   int compare(FileInfo *fileValues1,FileInfo *fileValues2);
+	   int Reduce(FileInfo *fileValues1,FileInfo *fileValues2, int reductionFactor);
+
+
+TASK 1: gtopoEcho.c
+
+gtopoEcho.c: Reads the gtopo File with the function in gtopoRead.c modules and writes the file.
+	     This modules also checks if the argument count is correct or not.
+	     Header Files: gtopoRead.h
+
+gtopoComp.c: Reads the two gtopo File with the function in gtopoRead.c modules and checks if they are identical or not.
+	     This modules also checks if the argument count is correct or not.
+	     Header Files: gtopoRead.h
+
+gtopoReduce.c: Reads the gtopo File with the function in gtopoRead.c modules and reduces the file with particluar scaling factor.
+	     	This modules also checks if the argument count is correct or not.
+	     	Header Files: gtopoRead.h

@@ -1,0 +1,5 @@
+First of all, I'll make sure that I'm writing a defensive program that tackles all the issues in the program. That means the program will return appropriate output message when an input is given. As, this program is also based on file handling, I'll make sure that if file stream is working or not. 
+
+Secondly, there will be checks for everything such as data, layout, dimensions of the image and allocation of memory for the images. Every failure will give an appropriate file name which failed during the process of execution. Lastly, each and every error will be displayed such that it will be easier to debug the program.
+
+
